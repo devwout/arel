@@ -2,7 +2,7 @@
 require File.expand_path('../lib/arel/version.rb', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name      = "arel"
+  s.name      = "arel-compat"
   s.version   = Arel::VERSION
   s.authors   = ["Bryan Helmkamp", "Nick Kallen", "Emilio Tagua"]
   s.date      = %q{2010-06-08}
@@ -28,5 +28,6 @@ and query generation.
   # circular dependency chain. The solution is for ActiveRecord to release
   # the connection adapters which Arel uses in a separate gem
   # s.add_dependency "activerecord", ">= 3.0.pre"
-  s.add_dependency "activesupport", ">= 3.0.0.beta"
+  s.add_dependency "activerecord", "~> 2.3.4"
+  s.add_dependency "activesupport", "~> 2.3.4"
 end
